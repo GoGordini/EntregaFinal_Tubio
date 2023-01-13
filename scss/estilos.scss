@@ -5,6 +5,16 @@
     background-color: $color_fondo  !important;
 }
 
+.navbar-brand {
+    color: $color_h1 !important;
+    font-size: calc($tamano-h1 / 2) !important;
+    font-weight: bold;
+    padding-left:0.5rem;
+    &:hover {
+        color: $nav_hover_color  !important;
+    }
+}
+
 .logo {
     padding: 5px;
     background-color: $color_h1;
@@ -37,14 +47,14 @@
 
     h1 {
         color: $color_h1;
-        font-size: $tamano_h1;
+        font-size: calc($tamano_h1*0.5);
         padding-top: 2.5rem;
         transition: all 0.5s;
     }
 
     h2 {
         color: $color_h2_h3;
-        font-size: calc($tamano-h1 / 2);
+        font-size: calc($tamano-h1*0.35);
         padding-top: 2.5rem;
         transition: all 0.5s;
     }
@@ -214,11 +224,16 @@ footer.btn {
 @media (max-width: 850px) {
     /* Tablet */
 
-h1{
+    .navbar-brand {
+        font-size: calc($tamano-h1*0.7) !important;
+        padding: 0.3rem;
+    }
+
+    h1{
     padding: 35px 6px 0px 6px;
 }    
     #home h1 {
-        font-size: calc($tamano-h1)*.8;
+        font-size: calc($tamano-h1)*.7;
         padding-top: $padding_top_md; 
 }
 
@@ -251,6 +266,11 @@ h1{
 
 @media (max-width: 767px) {
     /* Celular */
+    .navbar-brand {
+        font-size: calc($tamano-h1*0.42) !important;
+        padding: 0.3rem;
+    }
+    
     h1{
         padding: 10px 6px 0px 6px;}
 
@@ -262,7 +282,7 @@ h1{
         margin-left:0;
         padding-left: 0;
         padding-top: 1rem;
-        font-size: calc($tamano-h1 / 2);
+        font-size: calc($tamano-h1*0.4);
     }
 
     #home h2 {
